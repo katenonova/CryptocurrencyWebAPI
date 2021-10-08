@@ -5,7 +5,11 @@ namespace WebAPI.Helpers
 {
     public static class ExtensionMethods
     {
-        //This method gets string, hash it and returns converted hash string 
+        /**
+       * This method gets string, hash it and returns converted hash string
+       * param: raw data - data we want to be hash
+       * return: hash string
+       */
         public static string ComputeSha256Hash(string rawData)
         {
             using (SHA256 sha256Hash = SHA256.Create())

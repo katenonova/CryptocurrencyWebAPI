@@ -31,5 +31,17 @@
             </response>  
             GET /api/cryptocurrency/{key}?startDate=dd/MM/yyyy
         </member>
+        <member name="M:WebAPI.Helpers.ExtensionMethods.ComputeSha256Hash(System.String)">
+            This method gets string, hash it and returns converted hash string
+            param: raw data - data we want to be hash
+            return: hash string
+        </member>
+        <member name="M:WebAPI.Services.UserService.Authenticate(System.String,System.String)">
+            This method checks is user exists in the database
+            param: username 
+            param: password
+            return: if user doesn't exists in the database -> return null
+            if user exists in the database -> return user data
+        </member>
     </members>
 </doc>

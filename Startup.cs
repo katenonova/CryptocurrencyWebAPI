@@ -25,7 +25,6 @@ namespace WebAPI
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime.
         public void ConfigureServices(IServiceCollection services)
         {
             // Configure Redis cache server
@@ -54,7 +53,6 @@ namespace WebAPI
             services.AddControllers();            
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, APIDbContext context)
         {           
             if (env.IsDevelopment())

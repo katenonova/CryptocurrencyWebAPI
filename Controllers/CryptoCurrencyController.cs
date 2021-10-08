@@ -26,7 +26,6 @@ namespace WebAPI.Controllers
             this._context = context;
         }
 
-
         /// <summary>
         /// Get a cryptocurrency's metrics with optional filters
         /// </summary>
