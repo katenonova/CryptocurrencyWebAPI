@@ -22,6 +22,7 @@ namespace WebAPI.Services
         // This method checks is user exists in the database
         public async Task<User> Authenticate(string username, string password)
         {           
+        {
             User currentUser = await Task.Run(() => this._context.Users.Where(u => u.Username == username && u.Password == ExtensionMethods.ComputeSha256Hash(password)).FirstOrDefault());
             // return null if user not found
             if (currentUser == null)
