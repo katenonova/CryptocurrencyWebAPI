@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebAPI</name>
+    </assembly>
+    <members>
+        <member name="M:WebAPI.Controllers.CryptocurrencyController.GetCryptocurrencyData(System.String,WebAPI.Models.SearchFilter)">
+            <summary>
+            Get a cryptocurrency's metrics with optional filters
+            </summary>
+            <remarks>
+            
+            Sample requests:
+            
+                GET api/cryptocurrency/btc
+                Authorization: Basic YW5nZWxfYW5nZWxvdjphbmdlbA==
+                
+                GET api/cryptocurrency/btc?startDate=2021/10/01
+                Authorization: Basic YW5nZWxfYW5nZWxvdjphbmdlbA==
+                
+                GET api/cryptocurrency/btc?endDate=2009/01/05     
+                Authorization: Basic YW5nZWxfYW5nZWxvdjphbmdlbA==
+            </remarks>
+            <param name="key"> - an abbreviation of the cryptocurrency, 
+            Possible ones: btc (Bitcoin), bch (Bitcoin Cach), bnb (Binance Coin), ltc (Litecoin), bsv (BitcoinSV), eth (Ethereum) , xrp (Ripple)
+            </param>
+            <returns> cryptocurrency metrics data for the last day in JSON format</returns>
+            <response code="200">OK: Returns data in JSON format</response>
+            <response code="204">No content: There is no content in the given period</response>
+            <response code="400">Bad request: Wrong cryptocurrency abbreviation/ Query parameters are incorrect/ Start date must be before the end date 
+            </response>  
+            GET /api/cryptocurrency/{key}?startDate=dd/MM/yyyy
+        </member>
+    </members>
+</doc>
